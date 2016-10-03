@@ -1,0 +1,9 @@
+ul {
+  font-family:Tahoma;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: teal;
+}

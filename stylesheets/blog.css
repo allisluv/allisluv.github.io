@@ -46,3 +46,43 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+/* end reset */
+
+
+/* begin styling */
+
+section {
+	width: 800px;
+	margin: auto;
+	background-color: #ae9bb4;
+	padding: 30px;
+}
+
+body {
+	background-color: #ae9bb4;
+	font-family: 'Proza Libre', sans-serif;
+	color: #24072c;
+}
+
+h1 {
+	font-size: 70px;
+	text-align: center;
+}
+
+ul {
+	padding: 50px;
+}
+
+a {
+	text-decoration: none;
+	color: #24072c;
+}
+
+h2 {
+	font-size: 30px;
+}
+
+p {
+	text-indent: 50px;
+}

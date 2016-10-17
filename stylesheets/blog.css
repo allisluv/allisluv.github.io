@@ -70,16 +70,18 @@ header {
 	margin: 0px;
 }
 
+header a {
+	display: block;
+}
+
+header a img {
+	vertical-align: middle;
+}
 
 nav{
 	background-color: #95849f;
 	padding: 0px;
-	margin-top: -3px;
 	width: 1000px;
-}
-
-#home {
-	margin-top: -15px;
 }
 
 h1 {

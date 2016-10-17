@@ -53,16 +53,29 @@ table {
 /* begin styling */
 
 section {
-	width: 800px;
+	width: 1000px;
 	margin: auto;
-	background-color: #ae9bb4;
-	padding: 30px;
+	background-color: #d7c9de;
+	padding: 0px;
 }
 
 body {
-	background-color: #ae9bb4;
+	background-color: #d7c9de;
 	font-family: 'Proza Libre', sans-serif;
 	color: #24072c;
+}
+
+header {
+	padding: 0px;
+	margin: 0px;
+}
+
+
+nav{
+	background-color: #95849f;
+	padding: 0px;
+	margin: 0px;
+	width: 1000px;
 }
 
 h1 {
@@ -70,19 +83,73 @@ h1 {
 	text-align: center;
 }
 
-ul {
-	padding: 50px;
-}
-
 a {
 	text-decoration: none;
 	color: #24072c;
+}
+
+nav ul {
+	background-color: #95849f;
+}
+
+nav li {
+	float: left;
+}
+
+nav li a {
+	background-color: #95849f;
+	display: block;
+	text-align: center;
+	padding: 15px;
+	width: 303px
+}
+
+nav li a:hover {
+	background-color: #907e9a;
 }
 
 h2 {
 	font-size: 30px;
 }
 
+h3 {
+	font-size: 12px;
+}
+
+main {
+	margin-top: 100px;
+}
+
+main ul li {
+	margin-left: 150px;
+}
+
+main ul li a h2 {
+	display: inline-block;
+	height: 120px;
+	vertical-align: middle;
+}
+
+article {
+	margin-top: 25px;
+	padding: 50px;
+}
+
 p {
 	text-indent: 50px;
+	margin-bottom: 15px;
+	font-size: 15px;
+	line-height: 30px;
+}
+
+footer a {
+	background-color: #95849f;
+  display: block;
+  text-align: center;
+  padding: 15px;
+  width: 1000px
+}
+
+footer a:hover {
+	background-color: #907e9a;
 }

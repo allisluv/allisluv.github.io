@@ -90,6 +90,7 @@ figure {
 figcaption {
   display: block;
   width: 155px;
+  font-size: 12px;
   padding-left: 25px;
   padding-bottom: 25px;
 }

@@ -1,0 +1,189 @@
+#backtwo{
+  background-color: black;
+  background-image: url(images/backtwo.jpg);
+  background-size: cover;
+  font-family: 'Lato', sans-serif;
+}
+
+#backthree{
+  background-color: black;
+  background-image: url(images/backthree.jpg);
+  background-size: cover;
+  font-family: 'Lato', sans-serif;
+}
+
+#backfour{
+  background-color: black;
+  background-image: url(images/backfour.jpg);
+  background-size: cover;
+  font-family: 'Lato', sans-serif;
+}
+
+#backfive{
+  background-color: black;
+  background-image: url(images/backfive.jpg);
+  background-size: cover;
+  font-family: 'Lato', sans-serif;
+}
+
+header {
+  background-color: #3f3f3f;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 805px;
+  height: 100px;
+  font-style: light;
+  z-index: 1;
+}
+
+h1 {
+  position: absolute;
+  color: white;
+  letter-spacing: 10px;
+  font-size: 30px;
+  text-align: right;
+  right: 30px;
+}
+
+#one {
+  position: absolute;
+  color: black;
+  font-size: 15px;
+  text-align: right;
+  right: 365px;
+  bottom: 10px;
+}
+
+#two {
+  position: absolute;
+  color: black;
+  font-size: 15px;
+  text-align: right;
+  right: 40px;
+  bottom: 10px;
+}
+
+main {
+  display: block;
+  position: relative;
+  width: 1024px;
+  margin: auto;
+}
+
+nav {
+  display: block;
+  position: relative;
+  left: 840px;
+  top: -20px;
+}
+
+ul {
+  list-style: none;
+}
+nav a {
+  display: block;
+  width: 125px;
+  background-color:  rgba(63, 63, 63, 1);
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  padding-left: 15px;
+  font-size: 12px;
+}
+
+nav a:hover {
+  background-color:  rgba(45, 45, 45, 1);
+}
+
+#leftcolomn {
+  display: inline-block;
+  width: 200px;
+  float: left;
+  margin-top: -100px
+}
+
+figure {
+  margin-left: 0px;
+  margin-bottom: 10px;
+  width: 200px;
+  background-color:  rgba(240, 240, 240, .85);
+}
+
+figcaption {
+  display: block;
+  width: 155px;
+  font-size: 12px;
+  padding-left: 25px;
+  padding-bottom: 25px;
+}
+
+img {
+  width: 170px;
+  height: 170px;
+  padding: 15px;
+}
+
+#rightcolomn {
+  float: right;
+  width: 550px;
+  background-color: rgba(240, 240, 240, .85);
+  padding-top: 40px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: 22px;
+  margin-right: 125px;
+  margin-top: -150px;
+  margin-bottom: 50px;
+}
+
+#rightcolomn a {
+  text-decoration: none;
+  color: black;
+}
+
+#rightcolomn a:hover {
+  color: #3f3f3f;
+}
+
+h3 {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+p {
+  font-size: 15px;
+  padding-left: 30px;
+  padding-right:30px;
+  padding-top: 10px;
+}
+
+
+footer {
+  display: block;
+  position: fixed;
+  right: 0px;
+  width: 800px;
+  bottom: 0px;
+  background-color:  rgba(63, 63, 63, 1);
+  z-index: 1;
+}
+
+footer h6 {
+  display: inline-block;
+  padding-left: 40px;
+  padding-right: 40px;
+  color: white;
+}
+
+footer h6 a {
+  display: inline-block;
+  background-color:  rgba(63, 63, 63, 1);
+  text-decoration: none;
+  color: white;
+}
+
+footer h6 a: hover {
+  background-color:  rgba(80, 80, 80, 1);
+}

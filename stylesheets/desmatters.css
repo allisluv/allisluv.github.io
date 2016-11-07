@@ -1,6 +1,6 @@
 body {
   background-color: black;
-  background-image: url(images/backone.jpg);
+  background-image: url('../images/backone.jpg');
   background-size: cover;
   font-family: 'Lato', sans-serif;
 }

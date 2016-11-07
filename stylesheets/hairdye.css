@@ -1,27 +1,27 @@
 #backtwo{
   background-color: black;
-  background-image: url(images/backtwo.jpg);
+  background-image: url('../images/backtwo.jpg');
   background-size: cover;
   font-family: 'Lato', sans-serif;
 }
 
 #backthree{
   background-color: black;
-  background-image: url(images/backthree.jpg);
+  background-image: url('../images/backthree.jpg');
   background-size: cover;
   font-family: 'Lato', sans-serif;
 }
 
 #backfour{
   background-color: black;
-  background-image: url(images/backfour.jpg);
+  background-image: url('../images/backfour.jpg');
   background-size: cover;
   font-family: 'Lato', sans-serif;
 }
 
 #backfive{
   background-color: black;
-  background-image: url(images/backfive.jpg);
+  background-image: url('../images/backfive.jpg');
   background-size: cover;
   font-family: 'Lato', sans-serif;
 }

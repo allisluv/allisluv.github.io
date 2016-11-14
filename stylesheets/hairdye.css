@@ -2,6 +2,7 @@
   background-color: black;
   background-image: url('../images/backtwo.jpg');
   background-size: cover;
+  background-attachment: fixed;
   font-family: 'Lato', sans-serif;
 }
 
@@ -9,6 +10,7 @@
   background-color: black;
   background-image: url('../images/backthree.jpg');
   background-size: cover;
+  background-attachment: fixed;
   font-family: 'Lato', sans-serif;
 }
 
@@ -16,6 +18,7 @@
   background-color: black;
   background-image: url('../images/backfour.jpg');
   background-size: cover;
+  background-attachment: fixed;
   font-family: 'Lato', sans-serif;
 }
 
@@ -23,6 +26,7 @@
   background-color: black;
   background-image: url('../images/backfive.jpg');
   background-size: cover;
+  background-attachment: fixed;
   font-family: 'Lato', sans-serif;
 }
 

@@ -66,12 +66,18 @@ body {
 }
 
 header {
-	padding: 0px;
-	margin: 0px;
+	background: #95849f;
+	background: linear-gradient(to right, #d7c9de, #95849f, #d7c9de);
+	font-family: 'Tangerine', cursive;
+	color: #dedede;
+	font-size: 100px;
+	width: 1000;
+	padding-top: 60px;
+	padding-bottom: 40px;
 }
 
 header a {
-	display: block;
+	color: #dedede;
 }
 
 header a img {
@@ -137,14 +143,20 @@ main ul li a h2 {
 }
 
 article {
-	margin-top: 25px;
-	padding: 50px;
+	margin-top: 125px;
+	margin-bottom: 100px;
+	margin-right: 50px;
+	margin-left: 50px;
+	padding-right: 100px;
+	padding-left: 100px;
+	border-left: solid #95849f 5px;
+	border-right: solid #95849f 5px;
 }
 
 p {
 	text-indent: 50px;
 	margin-bottom: 15px;
-	font-size: 15px;
+	font-size: 17px;
 	line-height: 30px;
 }
 

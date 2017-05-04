@@ -1,14 +1,13 @@
 body {
-  background-color: black;
+  background-color: aliceblue;
   font-family: helvetica;
-  color: green;
+  color: seagreen;
 }
 
 img {
   position: fixed;
   left: 100px;
-  top: 0px;
-  height: 100%;
+  top: 5px;
 }
 
 header {
@@ -37,6 +36,7 @@ li {
 
 footer {
   position: absolute;
-  left: 204px;
+  right: 100px;
   bottom: 40px;
+  text-align: right;
 }

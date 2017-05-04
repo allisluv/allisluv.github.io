@@ -1,0 +1,42 @@
+body {
+  background-color: black;
+  font-family: helvetica;
+  color: green;
+}
+
+img {
+  position: fixed;
+  left: 100px;
+  top: 0px;
+  height: 100%;
+}
+
+header {
+  position: absolute;
+  left: 200px;
+  top: 0px;
+  font-size: 30px;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  position: absolute;
+  left: 163px;
+  top: 150px;
+  list-style: none;
+}
+
+li {
+  margin-top: 20px;
+  font-size: 25px;
+}
+
+footer {
+  position: absolute;
+  left: 204px;
+  bottom: 40px;
+}

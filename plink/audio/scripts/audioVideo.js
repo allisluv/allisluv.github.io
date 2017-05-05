@@ -36,14 +36,17 @@ var del = getElementById('delete');
 //when record button is clicked
 record.addEventListener('click', function () {
   // use the '.enabled' boolean to make sure user enabled the mic (otherwise we'd record silence)
-  if (mic.enabled) {
+  if (state === 0 && mic.enabled) {
 
     // Tell recorder to record to a p5.SoundFile which we will use for playback
     recorder.record(soundFile);
     background(255,0,0);
     state++;
-  } else {
+  } else if (state === 0 && !mic.enabled) {
     text('Enable mic and try again.', 20, 20);
+  } else if (state > 0) {
+    recorder.stop(); // stop recorder, and send the result to soundFile
+    background(0,255,0);
   }
 });
 

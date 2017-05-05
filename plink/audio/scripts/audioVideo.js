@@ -5,29 +5,83 @@ var mic, recorder, soundFile;
 var state = 0; // mousePress will increment from Record, to Stop, to Play
 
 function setup() {
-  var myCanvas = createCanvas(800, 250);
+  var myCanvas = createCanvas(800, 400);
   myCanvas.parent('mySketch');
   background(200);
   fill(0);
-  text('Enable mic and click the mouse to begin recording', 20, 20);
   console.log("set up");
 
-  // create an audio in
+// create an audio in
   mic = new p5.AudioIn();
 
-  // users must manually enable their browser microphone for recording to work properly!
+// users must manually enable their browser microphone for recording to work properly!
   mic.start();
 
-  // create a sound recorder
+// create a sound recorder
   recorder = new p5.SoundRecorder();
 
-  // connect the mic to the recorder
+// connect the mic to the recorder
   recorder.setInput(mic);
 
-  // create an empty sound file that we will use to playback the recording
+// create an empty sound file that we will use to playback the recording
   soundFile = new p5.SoundFile();
 }
 
+//get buttons
+var record = getElementById('record');
+var play = getElementById('play');
+var save = getElementById('save');
+var del = getElementById('delete');
+
+//when record button is clicked
+record.addEventListener('click', function () {
+  // use the '.enabled' boolean to make sure user enabled the mic (otherwise we'd record silence)
+  if (mic.enabled) {
+
+    // Tell recorder to record to a p5.SoundFile which we will use for playback
+    recorder.record(soundFile);
+    background(255,0,0);
+    state++;
+  } else {
+    text('Enable mic and try again.', 20, 20);
+  }
+});
+
+//when playback is clicked
+play.addEventListener('click', function () {
+//check that something has been recorded
+  if (state === 0) {
+    text('Record something with the record button first.', 20, 20);
+  } else {
+    soundFile.play(); // play the result!
+  }
+});
+
+//when save is clicked
+//save to a database
+/*
+save.addEventListener('click', function () {
+//check that something has been recorded
+  if (state === 0) {
+    text('Record something with the record button first.', 20, 20);
+  } else {
+    saveSound(soundFile, 'mySound.wav'); //this saves to the computer
+  }
+});
+*/
+
+//when delete is clicked
+del.addEventListener('click', function () {
+  // use the '.enabled' boolean to make sure user enabled the mic (otherwise we'd record silence)
+  if (state === 0) {
+    text("You haven't recorded anything yet.", 20, 20);
+  } else {
+    soundFile = new p5.SoundFile(); //reset and forget
+  }
+});
+
+
+/*
 function mousePressed() {
   // use the '.enabled' boolean to make sure user enabled the mic (otherwise we'd record silence)
   if (state === 0 && mic.enabled) {
@@ -53,3 +107,4 @@ function mousePressed() {
     state++;
   }
 }
+*/

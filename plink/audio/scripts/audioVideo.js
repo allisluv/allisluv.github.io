@@ -4,6 +4,7 @@ function setup() {
   var myCanvas = createCanvas(800, 250);
   myCanvas.parent('mySketch');
   background(211, 235, 238);
+  console.log("set up");
 }
 
 

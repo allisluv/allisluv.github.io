@@ -1,64 +1,56 @@
 console.log("link works");
 
+var mic, recorder, soundFile;
+
+var state = 0; // mousePress will increment from Record, to Stop, to Play
+
 function setup() {
   var myCanvas = createCanvas(800, 250);
   myCanvas.parent('mySketch');
-  background(211, 235, 238);
+  background(200);
+  fill(0);
+  text('Enable mic and click the mouse to begin recording', 20, 20);
   console.log("set up");
+
+  // create an audio in
+  mic = new p5.AudioIn();
+
+  // users must manually enable their browser microphone for recording to work properly!
+  mic.start();
+
+  // create a sound recorder
+  recorder = new p5.SoundRecorder();
+
+  // connect the mic to the recorder
+  recorder.setInput(mic);
+
+  // create an empty sound file that we will use to playback the recording
+  soundFile = new p5.SoundFile();
 }
 
+function mousePressed() {
+  // use the '.enabled' boolean to make sure user enabled the mic (otherwise we'd record silence)
+  if (state === 0 && mic.enabled) {
 
-function popping (x, y) {
-  if ((x <= (mouseX - 20) || x >= (mouseX + 20)) || (y <= (mouseY - 20) || y >= (mouseY + 20))) {
-    stroke(48, 84, 90);
-    fill(211, 235, 238);
-    ellipse(x, y, 30, 30);
-    stroke(238, 249, 250);
-    fill(238, 249, 250);
-    ellipse(x + 6, y - 7, 10, 5);
-  } else {
-    noStroke();
-    fill(238, 249, 250);
-    ellipse(x, y, 40, 40);
-    noFill();
-    stroke(48, 84, 90);
-    arc(x + 40, y, 50, 50, radians(135), radians(225));
-    arc(x - 40, y, 50, 50, radians(-45), radians(45));
-    arc(x, y + 40, 50, 50, radians(225), radians(315));
-    arc(x, y - 40, 50, 50, radians(45), radians(135));
+    // Tell recorder to record to a p5.SoundFile which we will use for playback
+    recorder.record(soundFile);
+
+    background(255,0,0);
+    text('Recording now! Click to stop.', 20, 20);
+    state++;
   }
-}
 
-function bubbles (x, y) {
-      stroke(48, 84, 90);
-      fill(211, 235, 238);
-      ellipse(x, y, 30, 30);
-      stroke(238, 249, 250);
-      fill(238, 249, 250);
-      ellipse(x + 6, y - 7, 10, 5);
-}
+  else if (state === 1) {
+    recorder.stop(); // stop recorder, and send the result to soundFile
 
+    background(0,255,0);
+    text('Recording stopped. Click to play & save', 20, 20);
+    state++;
+  }
 
-
-function draw () {
-
-  stroke(48, 84, 90);
-  fill(211, 235, 238);
-  rect(0, 0, 798, 248);
-
-  var x = 25;
-  var y = 25;
-
-  while (y <= 230) {
-    while (x <= 780) {
-      if (mouseIsPressed) {
-        popping (x, y);
-      } else {
-        bubbles (x, y);
-      }
-      x += 50;
-    }
-    y += 50;
-    x = 25;
+  else if (state === 2) {
+    soundFile.play(); // play the result!
+    saveSound(soundFile, 'mySound.wav'); // save file
+    state++;
   }
 }

@@ -30,7 +30,7 @@ function setup() {
 //get buttons
 var record = getElementById('record');
 var play = getElementById('play');
-var save = getElementById('save');
+var sav = getElementById('save');
 var del = getElementById('delete');
 
 //when record button is clicked
@@ -63,7 +63,7 @@ play.addEventListener('click', function () {
 //when save is clicked
 //save to a database
 /*
-save.addEventListener('click', function () {
+sav.addEventListener('click', function () {
 //check that something has been recorded
   if (state === 0) {
     text('Record something with the record button first.', 20, 20);

@@ -1,8 +1,37 @@
-console.log("link works");
+console.log("link works...");
 
 var mic, recorder, soundFile;
 
 var state = 0; // mousePress will increment from Record, to Stop, to Play
+
+//get buttons
+var record = document.getElementById('record');
+var play = document.getElementById('play');
+var sav = document.getElementById('sav');
+var del = document.getElementById('del');
+console.log(record);
+console.log(play);
+console.log(sav);
+console.log(del);
+
+//get the unordered list
+    var buttons = document.getElementById('buttons');
+    buttons.style.width = "500px";
+//get all the list items into an array
+    var list = document.getElementsByTagName('li');
+//create a variable to hold the number of list items
+    var x = 0;
+
+//itterate through the list to see how many
+//list items there are
+    for (var i = 0; i < list.length; i++) {
+      x += 170; // (160 is the width of one list item including its margins)
+    }
+    console.log(buttons.style.width + ' + ' + x);
+//change the width of the list to reflect the number of list items
+    buttons.style.width = x + "px";
+    console.log(buttons.style.width + ' + ' + x);
+
 
 function setup() {
   var myCanvas = createCanvas(800, 400);
@@ -27,15 +56,7 @@ function setup() {
   soundFile = new p5.SoundFile();
 }
 
-//get buttons
-var record = document.getElementById('record');
-var play = document.getElementById('play');
-var sav = document.getElementById('sav');
-var del = document.getElementById('del');
-console.log('record');
-console.log('play');
-console.log('sav');
-console.log('del');
+
 //when record button is clicked
 record.addEventListener('click', function () {
   console.log('record clicked');

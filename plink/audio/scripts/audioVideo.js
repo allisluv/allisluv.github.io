@@ -28,10 +28,10 @@ function setup() {
 }
 
 //get buttons
-var record = getElementById('record');
-var play = getElementById('play');
-var sav = getElementById('save');
-var del = getElementById('delete');
+var record = document.getElementById('record');
+var play = document.getElementById('play');
+var sav = document.getElementById('save');
+var del = document.getElementById('delete');
 
 //when record button is clicked
 record.addEventListener('click', function () {

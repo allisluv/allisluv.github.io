@@ -30,11 +30,15 @@ function setup() {
 //get buttons
 var record = document.getElementById('record');
 var play = document.getElementById('play');
-var sav = document.getElementById('save');
-var del = document.getElementById('delete');
-
+var sav = document.getElementById('sav');
+var del = document.getElementById('del');
+console.log('record');
+console.log('play');
+console.log('sav');
+console.log('del');
 //when record button is clicked
 record.addEventListener('click', function () {
+  console.log('record clicked');
   // use the '.enabled' boolean to make sure user enabled the mic (otherwise we'd record silence)
   if (state === 0 && mic.enabled) {
 
@@ -52,6 +56,7 @@ record.addEventListener('click', function () {
 
 //when playback is clicked
 play.addEventListener('click', function () {
+  console.log('play clicked');
 //check that something has been recorded
   if (state === 0) {
     text('Record something with the record button first.', 20, 20);
@@ -75,6 +80,7 @@ sav.addEventListener('click', function () {
 
 //when delete is clicked
 del.addEventListener('click', function () {
+  console.log('delete clicked');
   // use the '.enabled' boolean to make sure user enabled the mic (otherwise we'd record silence)
   if (state === 0) {
     text("You haven't recorded anything yet.", 20, 20);

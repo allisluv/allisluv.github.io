@@ -1,0 +1,13 @@
+body {
+  position: relative;
+  height: 95vh;
+}
+
+div {
+  width: 600px;
+  height: 250px;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

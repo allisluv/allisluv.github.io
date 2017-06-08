@@ -1,42 +1,48 @@
 // JavaScript Document
-document.addEventListener("DOMContentLoaded", function() {
-    console.log("DOM fully loaded and parsed");
+
+//Change s to any value between 0 and 1
+//to scale the logo
+var s = .2;
 
 
-
-});
-
+// Get the div to be scaled
 var div = document.getElementById('mySketch');
 console.log(div);
 var myCanvas;
-var b = 0;
-var s = .2;
+// These are the width and height that
+//triangles sizes match before being scaled
 var w = 750;
 var h = 394;
+// variable b captures if mouse is hovering
+var hover = 0;
 
+//calculate scaled height and width
 w = w*s;
 h = h*s;
+//apply height and width to CSS
 div.style.width = w + 'px';
 div.style.height = h + 'px';
 
 function setup() {
-  myCanvas = createCanvas(w, h);
+  myCanvas = createCanvas(w, h); //use scaled height and width
   myCanvas.parent('mySketch');
-  myCanvas.mouseOver(on);
-  myCanvas.mouseOut(off);
+  myCanvas.mouseOver(on); //listen for hover
+  myCanvas.mouseOut(off); //listen for hover
   console.log("set up");
 }
 
+//if mouse rolls over logo, change hover
 function on() {
-  b = 1;
+  hover = 1;
 }
-
+//if mouse rolls off logo, change hover
 function off() {
-  b = 0;
+  hover = 0;
 }
 
 function draw() {
-  if(b == 1) {
+  //only flicker if mouse is hovering the logo
+  if(hover == 1) {
     flickerLogo();
   } else {
     staticLogo();
@@ -44,8 +50,8 @@ function draw() {
 }
 
 function staticLogo() {
-
-  scaleLogo();
+  //scale the logo to match the canvas
+  scale(s);
 
   noStroke();
   //Draw the "P" triangles
@@ -182,8 +188,8 @@ function staticLogo() {
 
 
 function flickerLogo() {
-
-  scaleLogo();
+  //scale logo to fit canvas
+  scale(s);
 
   //Make "P" flicker
   fill(102, 45, 145);
@@ -318,13 +324,18 @@ function flickerLogo() {
   pickK();
 }
 
+//Assign a triangle to a new color^
 function pickP() {
+  // x determines frequency of color change
   var x = 0;
+  // y determines which triangle gets the color
   var y = 0;
-  x = Math.floor(Math.random()*20);
-  y = Math.floor(Math.random()*15);
+  x = Math.floor(Math.random()*20); // number changes frequency
+  y = Math.floor(Math.random()*15); // number of triangle options (number of cases)
 
+  // 1 out of 20 chance that a triangle will change colors
   if (x == 1) {
+    //assign triangle based on random y^
     switch (y) {
       case 0:
         triangle(0, 112, 0, 164, 62, 112);
@@ -377,6 +388,7 @@ function pickP() {
   }
 }
 
+//Assign a triangle to a new color^
 function pickL() {
   var x = 0;
   var y = 0;
@@ -412,6 +424,7 @@ function pickL() {
   }
 }
 
+//Assign a triangle to a new color^
 function pickI() {
   var x = 0;
   var y = 0;
@@ -438,6 +451,7 @@ function pickI() {
   }
 }
 
+//Assign a triangle to a new color^
 function pickD() {
   var x = 0;
   var y = 0;
@@ -467,6 +481,7 @@ function pickD() {
   }
 }
 
+//Assign a triangle to a new color^
 function pickN() {
   var x = 0;
   var y = 0;
@@ -529,6 +544,7 @@ function pickN() {
   }
 }
 
+//Assign a triangle to a new color^
 function pickK() {
   var x = 0;
   var y = 0;
@@ -577,8 +593,4 @@ function pickK() {
         break;
     }
   }
-}
-
-function scaleLogo() {
-  scale(s);
 }

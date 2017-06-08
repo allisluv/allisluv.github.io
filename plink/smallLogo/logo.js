@@ -1,13 +1,26 @@
 // JavaScript Document
 document.addEventListener("DOMContentLoaded", function() {
     console.log("DOM fully loaded and parsed");
+
+
+
 });
 
+var div = document.getElementById('mySketch');
+console.log(div);
 var myCanvas;
 var b = 0;
+var s = .2;
+var w = 750;
+var h = 394;
+
+w = w*s;
+h = h*s;
+div.style.width = w + 'px';
+div.style.height = h + 'px';
 
 function setup() {
-  myCanvas = createCanvas(750, 394);
+  myCanvas = createCanvas(w, h);
   myCanvas.parent('mySketch');
   myCanvas.mouseOver(on);
   myCanvas.mouseOut(off);
@@ -31,6 +44,8 @@ function draw() {
 }
 
 function staticLogo() {
+
+  scaleLogo();
 
   noStroke();
   //Draw the "P" triangles
@@ -167,6 +182,9 @@ function staticLogo() {
 
 
 function flickerLogo() {
+
+  scaleLogo();
+
   //Make "P" flicker
   fill(102, 45, 145);
   pickP();
@@ -559,4 +577,8 @@ function pickK() {
         break;
     }
   }
+}
+
+function scaleLogo() {
+  scale(s);
 }

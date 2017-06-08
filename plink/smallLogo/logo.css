@@ -1,0 +1,10 @@
+body {
+  position: relative;
+  height: 95vh;
+}
+
+div {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
